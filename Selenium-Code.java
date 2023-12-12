@@ -91,21 +91,21 @@ public class createcontacts {
         WebElement buttonTitle = driver.findElement(By.xpath("//button[@class='test-id__inline-edit-trigger slds-shrink-none inline-edit-trigger slds-button slds-button_icon-bare' and @title='Edit Title']"));
         buttonTitle.click();
 
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='Title']")));
-        //WebElement Title = driver.findElement(By.xpath("//input[@name='Title']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='Title']")));
+        WebElement Title = driver.findElement(By.xpath("//input[@name='Title']"));
 
-        //String textInsidetitleBox = Title.getAttribute("value");
+        String textInsidetitleBox = Title.getAttribute("value");
 
         // Check whether input field is blank
 
-      //  if(textInsidetitleBox.isEmpty())
-      //  {
-      //      System.out.println("Input field is empty");
-      //  }
-      //  else
-      //  {
-      //      System.out.println(textInsidetitleBox);
-      //  }
+        if(textInsidetitleBox.isEmpty())
+        {
+            System.out.println("Input field is empty");
+        }
+        else
+        {
+            System.out.println(textInsidetitleBox);
+        }
     }
 }
 
